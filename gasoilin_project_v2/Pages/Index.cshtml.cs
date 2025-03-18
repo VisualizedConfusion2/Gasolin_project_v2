@@ -14,6 +14,6 @@ public class IndexModel : PageModel
     //yes yes
     public void OnGet()
     {
-        //making a difference
+        //fuck off
     }
 }
