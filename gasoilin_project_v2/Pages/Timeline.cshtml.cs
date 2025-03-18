@@ -7,6 +7,7 @@ namespace gasoilin_project_v2.Pages
     {
         public void OnGet()
         {
+            
         }
     }
 }
