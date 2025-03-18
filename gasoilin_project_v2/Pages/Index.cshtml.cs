@@ -11,9 +11,9 @@ public class IndexModel : PageModel
     {
         _logger = logger;
     }
-    //yes yes yes yes
+    //yes yes
     public void OnGet()
     {
-
+        //making a difference
     }
 }
