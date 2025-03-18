@@ -11,10 +11,12 @@ public class IndexModel : PageModel
     {
         _logger = logger;
     }
+    //det her er en tester for at e om jeg godt kan skrive
+
     //yes yes
     
     public void OnGet()
     {
-
+        //fuck off
     }
 }
