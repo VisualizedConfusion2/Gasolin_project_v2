@@ -16,6 +16,6 @@ public class IndexModel : PageModel
     //yes yes
     public void OnGet()
     {
-
+        //fuck off
     }
 }
