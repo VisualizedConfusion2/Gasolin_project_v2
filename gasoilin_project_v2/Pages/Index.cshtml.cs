@@ -14,7 +14,7 @@ public class IndexModel : PageModel
     //det her er en tester for at e om jeg godt kan skrive
 
     //yes yes
-    
+    //tjimnutter kvatjerbvhfh
     public void OnGet()
     {
         //fuck off
