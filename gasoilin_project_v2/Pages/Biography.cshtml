@@ -1,36 +1,39 @@
 ﻿@page
 @model BiographyModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home page"; // Sets the page title for the browser and layout
 }
 
 <style>
+    /* Styling for images in the card */
     .card-img-top {
-        width: 100%; /* Ensures it looks good on all screen types and zooms */
-        height: 200px; /* Set a fixed height in pixels*/
+        width: 100%; /* Ensures it looks good on all screen sizes and zoom levels */
+        height: 200px; /* Sets a fixed height */
         object-fit: cover; /* Ensures images maintain aspect ratio while filling the space */
     }
 </style>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-    @for (int i = 0; i < Model.Peoples.Length; i += 2)
+    @for (int i = 0; i < Model.Peoples.Length; i += 2) // Loops through the People array in steps of 2
     {
         <div style="display: flex; gap: 1rem;">
+            <!-- First Card -->
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/Image/@Model.Peoples[i].ImagePath" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">@Model.Peoples[i].Name</h5>
-                    <p class="card-text">@Model.Peoples[i].Description</p>
+                    <h5 class="card-title">@Model.Peoples[i].Name</h5> <!-- Displays the name -->
+                    <p class="card-text">@Model.Peoples[i].Description</p> <!-- Displays the description -->
                 </div>
             </div>
 
-            @if (i + 1 < Model.Peoples.Length)
+            @if (i + 1 < Model.Peoples.Length) // Checks if there is a second person in the current iteration
             {
+                <!-- Second Card (if exists) -->
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="/Image/@Model.Peoples[i + 1].ImagePath" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">@Model.Peoples[i + 1].Name</h5>
-                        <p class="card-text">@Model.Peoples[i + 1].Description</p>
+                        <h5 class="card-title">@Model.Peoples[i + 1].Name</h5> <!-- Displays the second person's name -->
+                        <p class="card-text">@Model.Peoples[i + 1].Description</p> <!-- Displays the second person's description -->
                     </div>
                 </div>
             }
