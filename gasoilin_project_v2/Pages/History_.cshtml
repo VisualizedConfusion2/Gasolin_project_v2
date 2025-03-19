@@ -16,6 +16,11 @@
         background-color: #FAF0E6; /* Light beige background for section content */
         text-align: start; /* Aligns the text to the start (left) */
     }
+
+    .video-container {
+        text-align: center; /* Center-aligns the video */
+        margin: 20px 0; /* Adds margin above and below the video */
+    }
 </style>
 
 <!-- Main title of the page, bound to the Title property in the backend model -->
@@ -25,9 +30,19 @@
 <h2>@Model.Content.Section1Title</h2>
 <p>@Model.Content.Section1Content</p>
 
+<!-- Embed first video -->
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ROSYkEQY2sA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <!-- Second section: Title and content bound to Section2Title and Section2Content -->
 <h2>@Model.Content.Section2Title</h2>
 <p>@Model.Content.Section2Content</p>
+
+<!-- Embed second video -->
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NSYf4mbaGUI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <!-- Third section: Title and content bound to Section3Title and Section3Content -->
 <h2>@Model.Content.Section3Title</h2>
