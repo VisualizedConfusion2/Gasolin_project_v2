@@ -4,9 +4,9 @@
     ViewData["Title"] = "Home page";
 }
 <div class="container-fluid">
-	<img class="img-fluid" src="~/Image/banner.png" alt="Banner af Gasolin">
+    <img class="img-fluid" src="@Model.Content.ImageUrl" alt="@Model.Content.AltText">
 </div>
 <div class="text-center">
-    <h1 class="display-4"></h1>
-    <p></p>
+    <h1 class="display-4">@Model.Content.Title</h1>
+    <p>@Model.Content.Description</p>
 </div>
