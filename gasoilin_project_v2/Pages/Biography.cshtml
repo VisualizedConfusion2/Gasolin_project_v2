@@ -4,15 +4,28 @@
     ViewData["Title"] = "Home page";
 }
 
-@for (int i = 0; i < Model.Peoples.Length; i++)
-{
-    <div style="display: flex; justify-content: center; gap: 1rem;">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Image/@Model.Peoples[i].ImagePath" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Peoples[i].Name</h5>
-                <p class="card-text">@Model.Peoples[i].Description</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    @for (int i = 0; i < Model.Peoples.Length; i += 2)
+    {
+        <div style="display: flex; gap: 1rem;">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/Image/@Model.Peoples[i].ImagePath" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Peoples[i].Name</h5>
+                    <p class="card-text">@Model.Peoples[i].Description</p>
+                </div>
             </div>
+
+            @if (i + 1 < Model.Peoples.Length)
+            {
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/Image/@Model.Peoples[i + 1].ImagePath" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Peoples[i + 1].Name</h5>
+                        <p class="card-text">@Model.Peoples[i + 1].Description</p>
+                    </div>
+                </div>
+            }
         </div>
-    </div>
-}
+    }
+</div>
