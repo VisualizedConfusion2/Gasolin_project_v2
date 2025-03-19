@@ -9,7 +9,7 @@ namespace gasoilin_project_v2.Pages
 
         //public People peoples { set; get; }
 
-        private People[] peoples = new People[4];
+        private People[] peoples = new People[5];
 
 
 
@@ -25,13 +25,15 @@ namespace gasoilin_project_v2.Pages
         {
         //People = new persons("kim", "Verdens sødeste kat", "https://media.tenor.com/2W3J9A-BQBgAAAAm/moves-dance.webp");
 
-        Peoples[0] = new People("Kim", "Verdens sødeste mand", "bobdance.gif");
+        Peoples[0] = new People("Kim", "Verdens sødeste mand", "Kim.jpg");
 
-        Peoples[1] = new People("Kim", "Sjoveste lille mand", "waltor.jpg");
+        Peoples[1] = new People("Bjørn", "Sjoveste lille mand", "Bjørn.jpg");
 
-        Peoples[2] = new People("Kim", "En rigtig bølle", "download.jpg");
+        Peoples[2] = new People("Franz", "En rigtig bølle", "Franz.jpg");
 
-        Peoples[3] = new People("Kim", "Han ser lidt underlig ud", "frogultra.png");
+        Peoples[3] = new People("Søren", "Han ser lidt underlig ud", "Søren.jpg");
+
+        Peoples[4] = new People("Wili", "Han ser lidt underlig ud", "Willi.jpg");
         }
     }
 }
