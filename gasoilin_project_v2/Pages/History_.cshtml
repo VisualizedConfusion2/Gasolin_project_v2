@@ -1,28 +1,34 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "History Page";
+    ViewData["Title"] = "History Page"; // Sets the title of the page in the browser tab.
 }
+
+<!-- Inline CSS for styling the page -->
 <style>
     h2 {
-        background-color: #F4C542;
-        text-align: center;
-        padding: 15px;
+        background-color: #F4C542; /* Yellow background for section titles */
+        text-align: center; /* Center-aligns the section titles */
+        padding: 15px; /* Adds padding around the section titles */
     }
 
     p {
-        background-color: #FAF0E6;
-        text-align: start;
+        background-color: #FAF0E6; /* Light beige background for section content */
+        text-align: start; /* Aligns the text to the start (left) */
     }
 </style>
 
+<!-- Main title of the page, bound to the Title property in the backend model -->
 <h1 class="text-center">@Model.Content.Title</h1>
 
+<!-- First section: Title and content bound to Section1Title and Section1Content -->
 <h2>@Model.Content.Section1Title</h2>
 <p>@Model.Content.Section1Content</p>
 
+<!-- Second section: Title and content bound to Section2Title and Section2Content -->
 <h2>@Model.Content.Section2Title</h2>
 <p>@Model.Content.Section2Content</p>
 
+<!-- Third section: Title and content bound to Section3Title and Section3Content -->
 <h2>@Model.Content.Section3Title</h2>
 <p>@Model.Content.Section3Content</p>
