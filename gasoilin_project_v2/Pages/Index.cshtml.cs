@@ -8,7 +8,7 @@ namespace gasoilin_project_v2.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public PageContent Content { get; private set; }
+        public PageContent Content { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -28,8 +28,8 @@ namespace gasoilin_project_v2.Pages
         {
             return new PageContent
             {
-                ImageUrl = "banner.png",
-                AltText = "Banner af Gasolin",
+                ImageUrl = "image/banner.png",
+                AltText = "Banner af Gasolin", //if image dosent work this shows up
                 Title = "", //write titel text here
                 Description = "", //write text here about
             };
