@@ -34,15 +34,12 @@ Inception Deck beskriver formål og design.
 
 Installation og Kørsel
 
-Klon repository:
-
-git clone <repository-url>
+Adgang til koden:
+du kan bruge: git clone <repository-url>
 
 Åbn projektet i Visual Studio.
 
 Kør applikationen via IIS Express.
-
-Test QR-kode funktionaliteten.
 
 Kontakt
 
