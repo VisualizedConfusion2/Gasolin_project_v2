@@ -1,5 +1,5 @@
 ﻿@page
-@model gasoilin_project_v2.Pages.BiographyModel
+@model BiographyModel
 @{
     ViewData["Title"] = "Home page";
 }
@@ -8,46 +8,11 @@
 {
     <div style="display: flex; justify-content: center; gap: 1rem;">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Images/@Model.Peoples[i].ImagePath" alt="Card image cap">
+            <img class="card-img-top" src="/Image/@Model.Peoples[i].ImagePath" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">@Model.Peoples[i].Name</h5>
                 <p class="card-text">@Model.Peoples[i].Description</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Images/@Model.Peoples[i].ImagePath" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Peoples[i].Name</h5>
-                <p class="card-text">@Model.Peoples[i].Description</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Images/@Model.Peoples[i].ImagePath" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Peoples[i].Name</h5>
-                <p class="card-text">@Model.Peoples[i].Description</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Images/@Model.Peoples[i].ImagePath" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Peoples[i].Name</h5>
-                <p class="card-text">@Model.Peoples[i].Description</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Images/@Model.Peoples[i].ImagePath" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Peoples[i].Name</h5>
-                <p class="card-text">@Model.Peoples[i].Description</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
     </div>
-
 }
