@@ -37,8 +37,10 @@ namespace gasoilin_project_v2.Pages
             {
                 ImageUrl = "image/banner.png", // URL of the banner image
                 AltText = "Banner af Gasolin", // Alternative text for the image if it doesn't load
-                Title = "", // Title text for the page
-                Description = "", // Description text for the page
+                Title = "Hvorfor Gasolin?", // Title text for the page
+                Description = "Gasolin har vist deres lange levetid ved stadig at sælge tusindvis af albums lang tid efter deres opløsning med udgivelsen af 'The Black Box' opsamlingsalbummet i 2003 der forblev i den danske top 40 i over 100 uger" +
+                "\n For at give festivals gæsterne et første indblik eller et kærligt gensyn med Gasolin har vi lavet denne side der går over deres historie og hvem der var i Gasolin"
+                , // Description text for the page
             };
         }
     }
