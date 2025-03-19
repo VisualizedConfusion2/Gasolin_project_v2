@@ -4,12 +4,9 @@
     ViewData["Title"] = "Home page";
 }
 <div class="container-fluid">
-	<img class="img-fluid" src="~/Image/banner.png" alt="Banner af Gasolin">
+    <img class="img-fluid" src="@Model.Content.ImageUrl" alt="@Model.Content.AltText">
 </div>
 <div class="text-center">
-    <h1 class="display-4" style="color:#e76f1f">Hvorfor Gasolin?</h1>
-    <p class="text-start">Selvom Gasolin’ officielt ophørte i 1978, lever deres musik i bedste velgående. 
-       Bandet har gentagne gange oplevet fornyet interesse, og nye udgivelser med gammelt materiale har toppet hitlisterne længe efter deres tid
-       Da bandets opsamlingsalbum "The Black Box" udkom i 2003, var den et hit og lå i den danske top 40 i mere end 100 uger der viser bandets tidsløshed
-    </p>
+    <h1 class="display-4">@Model.Content.Title</h1>
+    <p>@Model.Content.Description</p>
 </div>
