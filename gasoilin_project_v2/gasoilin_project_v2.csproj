@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\images\banner.png" />
+    <None Include="wwwroot\Image\banner.png" />
   </ItemGroup>
 
 </Project>
