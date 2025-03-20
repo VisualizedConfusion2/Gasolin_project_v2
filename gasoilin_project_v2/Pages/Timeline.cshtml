@@ -1,31 +1,17 @@
 ﻿@page
-@model gasoilin_project_v2.Pages.HistoryModel
+@model gasoilin_project_v2.Pages.TimelineModel
 @{
     ViewData["Title"] = "History";
 }
 
-<style>
-    h2 {
-        background-color: #F4C542;
-        text-align: center;
-        padding: 15px;
-    }
-
-    p {
-        background-color: #FAF0E6;
-        text-align: start;
-        padding: 10px;
-    }
-</style>
-
 <div class="text-center">
     <h1>Tidslinje</h1>
-    @foreach (var timelineEvent in Model.TimelineEvents)
+    @for (int i=0; i<Model.TimelineEvents.Count; i++)
     {
-        <h2>@timelineEvent.Year</h2>
-        <p>
-            <b>@timelineEvent.Title</b><br />
-            @timelineEvent.Description
+        <h2 class="h2class">@Model.TimelineEvents[i].Year</h2>
+        <h3 class="pclass">@Model.TimelineEvents[i].UnderHeading</h3>
+        <p class="pclass">
+            @Model.TimelineEvents[i].Description
         </p>
     }
 </div>

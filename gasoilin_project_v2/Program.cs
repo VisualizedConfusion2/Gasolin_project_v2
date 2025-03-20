@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
 namespace gasoilin_project_v2
 {
     public class Program

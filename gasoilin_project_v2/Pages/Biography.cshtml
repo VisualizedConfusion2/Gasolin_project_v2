@@ -4,58 +4,14 @@
     ViewData["Title"] = "Home page"; // Sets the page title for the browser and layout
 }
 
-<style>
-    /* Styling for images in the card */
-    .card-img-top {
-        width: 100%; /* Ensures the image takes up the full width of the card */
-        height: 200px; /* Sets a fixed height for the image */
-        object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the space */
-    }
-
-    /* Flex container for the entire page to center content */
-    .page-container {
-        display: flex;
-        flex-direction: column; /* Stacks children vertically */
-        align-items: center; /* Centers children horizontally */
-        justify-content: center; /* Centers children vertically */
-        min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
-        padding: 1rem; /* Adds some padding around the content */
-        width: 100%; /* Ensures the container takes up the full width */
-    }
-
-    /* Flex container for cards */
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Centers cards horizontally within the container */
-        gap: 1rem; /* Adds spacing between cards */
-        width: 100%; /* Ensures the container takes up the full width */
-        max-width: 1200px; /* Limits the maximum width of the card container */
-    }
-
-    /* Individual card styling */
-    .card {
-        flex: 1 1 calc(50% - 2rem); /* Allows two cards per row with a gap of 1rem between them */
-        max-width: 18rem; /* Sets a maximum width for the cards on larger screens */
-    }
-
-    /* Media query for smaller screens (e.g., tablets and mobile devices) */
-    @@media (max-width: 768px) {
-        .card {
-            flex: 1 1 100%; /* Stacks cards vertically on smaller screens */
-            max-width: 100%; /* Allows cards to take up the full width of the screen */
-        }
-    }
-</style>
-
 <!-- Main container for the entire page -->
 <div class="page-container">
     <!-- Container for the cards -->
     <div class="card-container">
-        @for (int i = 0; i < Model.Peoples.Length; i += 2) // Loops through the People array in steps of 2
+        @for (int i = 0; i < Model.Peoples.Length; i ++) // Loops through the People array
         {
             <!-- Container for each pair of cards -->
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; width: 100%; justify-content: center;">
+            <div class="divcardclass"> 
                 <!-- First Card -->
                 <div class="card">
                     <!-- Card image -->
@@ -66,20 +22,6 @@
                         <p class="card-text">@Model.Peoples[i].Description</p> <!-- Displays the description of the person -->
                     </div>
                 </div>
-
-                @if (i + 1 < Model.Peoples.Length) // Checks if there is a second person in the current iteration
-                {
-                    <!-- Second Card (if exists) -->
-                    <div class="card">
-                        <!-- Card image -->
-                        <img class="card-img-top" src="/Image/@Model.Peoples[i + 1].ImagePath" alt="Card image cap">
-                        <!-- Card body containing name and description -->
-                        <div class="card-body">
-                            <h5 class="card-title">@Model.Peoples[i + 1].Name</h5> <!-- Displays the name of the second person -->
-                            <p class="card-text">@Model.Peoples[i + 1].Description</p> <!-- Displays the description of the second person -->
-                        </div>
-                    </div>
-                }
             </div>
         }
     </div>

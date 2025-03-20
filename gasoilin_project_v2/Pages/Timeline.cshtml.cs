@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 namespace gasoilin_project_v2.Pages
 {
-    public class HistoryModel : PageModel
+    public class TimelineModel : PageModel
     {
         public class TimelineEvent
         {
             public string Year { get; set; }
-            public string Title { get; set; }
+            public string UnderHeading { get; set; }
             public string Description { get; set; }
 
-            public TimelineEvent(string year, string title, string description)
+            public TimelineEvent(string year, string underHeading, string description)
             {
                 Year = year;
-                Title = title;
+                UnderHeading = underHeading;
                 Description = description;
             }
         }
