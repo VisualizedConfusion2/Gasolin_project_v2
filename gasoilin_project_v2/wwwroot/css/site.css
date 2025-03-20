@@ -51,3 +51,7 @@ body {
     text-align: start;
     padding: 10px;
 }
+
+.h5class {
+    font-weight: bold;
+}
