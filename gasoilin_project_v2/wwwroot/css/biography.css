@@ -47,3 +47,8 @@
     width: 35%; 
     justify-content: center;
 }
+.pclass {
+    background-color: #FAF0E6;
+    text-align: start;
+    padding: 10px;
+}
