@@ -12,14 +12,14 @@
         {
             /* Container for each pair of cards */
             <div class="divcardclass"> 
-                /* First Card */
+                @* /* First Card */ *@
                 <div class="card">
-                    /* Card image */
+                    @* /* Card image */ *@
                     <img class="card-img-top" src="/Image/@Model.Peoples[i].ImagePath" alt="Card image cap">
                     /* Card body containing name and description */
                     <div class="card-body">
-                        <h5 class="card-title">@Model.Peoples[i].Name</h5> /* Displays the name of the person */
-                        <p class="card-text">@Model.Peoples[i].Description</p> /* Displays the description of the person */
+                        <h5 class="card-title">@Model.Peoples[i].Name</h5> @*/* Displays the name of the person */ *@
+                        <p class="card-text">@Model.Peoples[i].Description</p> @*/* Displays the description of the person */*@
                     </div>
                 </div>
             </div>
