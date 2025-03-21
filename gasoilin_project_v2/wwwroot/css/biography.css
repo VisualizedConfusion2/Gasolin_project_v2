@@ -1,55 +1,58 @@
 ﻿/* Styling for images in the card */
 .card-img-top {
-    width: 100%; /* Ensures the image takes up the full width of the card */
-    height: 50%; /* Sets a fixed height for the image */
-    object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the space */
+    width: 100%; /* Full width of the card */
+    height: 12.5rem; /* Fixed height using rem */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
-/* Flex container for the entire page to center content */
+/* Flex container for the entire page */
 .page-container {
     display: flex;
-    /*flex-direction: column;*/ /* Stacks vertically */
-    align-items: center; /* Centers horizontally */
-    /*justify-content: center;*/ /* Centers vertically */
-    min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
-    padding: 1rem; /* Adds some padding around the content */
-    width: 100%; /* Ensures the container takes up the full width */
-    min-width: 70%;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    width: 100%;
 }
 
 /* Flex container for cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers cards horizontally within the container */
-    /*gap: 1rem;*/ /* Adds spacing between cards */
-    width: auto; /* Ensures the container takes up the full width */
-    max-width: auto; /* Limits the maximum width of the card container */
+    justify-content: center;
+    gap: 1rem; /* Spacing between cards */
+    width: 100%;
+    max-width: 75rem; /* Limit maximum width for larger screens */
 }
 
 /* Individual card styling */
 .card {
-    flex: 1 1 50%; /* Allows two cards per row with a gap of 1rem between them */
-    /*max-width: 18rem;*/ /* Sets a maximum width for the cards on larger screens */
+    flex: 1 1 calc(50% - 1rem); /* Two cards per row with gap */
+    max-width: calc(50% - 1rem); /* Adjust for gap */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
-/* Media query for smaller screens (e.g., tablets and mobile devices) */
-@media (max-width: 768px) {
+/* Media query for smaller screens */
+@media (max-width: 48rem) { /* 768px = 48rem */
     .card {
-        flex: 1 1 100%; /* Stacks cards vertically on smaller screens */
-        max-width: 100%; /* Allows cards to take up the full width of the screen */
+        flex: 1 1 100%; /* Stack cards vertically */
+        max-width: 100%; /* Full width on smaller screens */
     }
 }
 
+/* Additional card wrapper styling */
 .divcardclass {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 50%; 
-    width: 45%; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Consistent spacing */
+    width: 100%;
     justify-content: center;
 }
+
+/* Paragraph styling */
 .pclass {
     background-color: #FAF0E6;
     text-align: start;
-    padding: 10px;
+    padding: 0.625rem; /* 10px = 0.625rem */
+    margin: 0; /* Remove default margin */
 }
