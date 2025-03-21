@@ -1,7 +1,7 @@
 ﻿/* Styling for images in the card */
 .card-img-top {
     width: 100%; /* Ensures the image takes up the full width of the card */
-    height: 200px; /* Sets a fixed height for the image */
+    height: 50%; /* Sets a fixed height for the image */
     object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the space */
 }
 
@@ -14,6 +14,7 @@
     min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
     padding: 1rem; /* Adds some padding around the content */
     width: 100%; /* Ensures the container takes up the full width */
+    min-width: 70%;
 }
 
 /* Flex container for cards */
@@ -21,15 +22,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centers cards horizontally within the container */
-    gap: 1rem; /* Adds spacing between cards */
+    /*gap: 1rem;*/ /* Adds spacing between cards */
     width: auto; /* Ensures the container takes up the full width */
-    max-width: 1200px; /* Limits the maximum width of the card container */
+    max-width: auto; /* Limits the maximum width of the card container */
 }
 
 /* Individual card styling */
 .card {
-    flex: 1 1 calc(50% - 2rem); /* Allows two cards per row with a gap of 1rem between them */
-    max-width: 18rem; /* Sets a maximum width for the cards on larger screens */
+    flex: 1 1 50%; /* Allows two cards per row with a gap of 1rem between them */
+    /*max-width: 18rem;*/ /* Sets a maximum width for the cards on larger screens */
 }
 
 /* Media query for smaller screens (e.g., tablets and mobile devices) */
@@ -43,8 +44,8 @@
 .divcardclass {
     display: flex; 
     flex-wrap: wrap; 
-    gap: 1rem; 
-    width: 35%; 
+    gap: 50%; 
+    width: 45%; 
     justify-content: center;
 }
 .pclass {
